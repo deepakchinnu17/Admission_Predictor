@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Admission Predictor</h2>
+            <h4>GRE(260-340)</h4><input id="first" name="GRE" type="number ">
+            <h4>TOEFL(0-120)</h4><input id="second" name="TOEFL" required="required" type="number ">
+            <h4>University_Rating(1-5)</h4><input id="third" name="UR" required="required" type="number ">
+            <h4>SOP(1-5)</h4><input id="fourth" name="SOP" required="required" type="number ">
+	        <h4>LOR(1-5)</h4><input id="fifth" name="LOR" required="required" type="number ">
+            <h4>CGPA(1-10)</h4><input id="sixth" name="GPA" required="required" type="number ">
+            <h4>Research(0/1)</h4><input id="seventh" name="RES" required="required" type="number ">
+            <br><button id="sub" type="submit ">ADMIT?REJECT</button>
+        </form>
+        <h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        h4{
+            color: blue;
+        }
+        body {
+            background-color: ;
+            background-image: url('https://15xh2r248z7d286gcz3i6g1q-wpengine.netdna-ssl.com/wp-content/uploads/job-manager-uploads/company_logo/2018/10/University-of-California-Los-Angeles-sqr-1.jpg');
+            text-align: center;
+            background-size: 400px 600px;
+            background-repeat: no-repeat;
+            padding: 0px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #fifth {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #sixth {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #seventh {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
